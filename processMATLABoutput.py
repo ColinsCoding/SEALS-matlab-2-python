@@ -23,7 +23,7 @@ def convert_txt_to_csv(open_path, save_path, excluded_variables):
             writer.writerow([variable, value])
 
 # Example usage
-open_path = '/Users/colincasey/UCLA/jalalilab/jalali-lab-first-assignment/consoleTXToutputs/mainvariables20240113214128.txt'  # Replace with your text file path
+open_path = '/Users/colincasey/UCLA/jalalilab/jalali-lab-first-assignment/consoleTXToutputs/matlabmainvariables20240115115635.txt'  # Replace with your text file path
 save_path = '/Users/colincasey/UCLA/jalalilab/jalali-lab-first-assignment/consoleTXToutputs/matlabmainvariables.csv'  # Replace with your desired CSV file path
 excluded_variables = ['filename']  # Replace with variables to exclude
 
