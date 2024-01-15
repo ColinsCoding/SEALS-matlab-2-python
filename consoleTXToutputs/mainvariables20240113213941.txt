@@ -1,0 +1,39 @@
+Matlab Function
+Variable        | Value
+--------------------------------------
+D  | 0.065
+I_p  | [6.3843e-10  6.4194e-10 ... 5.2902e-09  5.0192e-09]
+I_s  | [3.0412e-10   3.255e-10 ... 5.0205e-09  4.7034e-09]
+I_tot  | [9.4256e-10  9.6745e-10 ... 1.0311e-08  9.7226e-09]
+Im  | [4.7423e-10  4.8871e-10 ... 5.1434e-09  4.8306e-09]
+NA  | 0.7
+P  | 0.0058
+T_p  | [2.8908      2.8608 ... -0.13456   -0.095936]
+T_s  | [-0.84393      -0.875 ... 3.0241      3.0601]
+X  | 'The mie scattering cross section is 1.64e-10.'
+a  | 0.9023
+an  | [0.99778-0.047072i         0.85434-0.35277i ... 1.2667e-16-1.1255e-08i   1.6138e-18-1.2704e-09i]
+band  | 2e-08
+bn  | [0.87823-0.32703i        0.99488-0.071345i ... 1.9075e-17-4.3675e-09i   2.0368e-19-4.5131e-10i]
+c  | 3e+08
+cs  | 1.64e-10
+d  | 9.0909e-07
+dcorr  | -0.00042448
+default  | 'd'
+dia  | 9.94e-06
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mat2str')" style="font-weight:bold">mat2str</a>
+Input matrix must be a numeric array, character array, or string array.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('listVariables', '/Users/colincasey/Downloads/listVariables.m', 19)" style="font-weight:bold">listVariables</a> (<a href="matlab: opentoline('/Users/colincasey/Downloads/listVariables.m',19,0)">line 19</a>)
+            disp([varName '  | ' mat2str(varValue, 5)]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', '/Users/colincasey/Downloads/main.m', 125)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('/Users/colincasey/Downloads/main.m',125,0)">line 125</a>)
+listVariables();
+} 
+main
+Qualities of the Particle and Medium
+Would you like to use default or custom values?
+Default or custom values? Type d or c: d
+Rayleigh Debye or Mie Model? Type r or m: m
+Starting Mie function in MATLAB
+The mie scattering cross section is 1.64e-10.
