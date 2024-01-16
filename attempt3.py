@@ -26,6 +26,39 @@ def list_variables(scope):
 
         print(f"{key:<15} | {display_value}")
 
+# import csv
+# import numpy as np
+# from datetime import datetime
+
+# def save_variables_to_csv(scope, excluded_vars=['params', 'axs'], file_path=None):
+#     # Create a filename with current datetime
+#     dt = datetime.now().strftime('%Y%m%d%H%M%S')
+#     if not file_path:
+#         file_path = f'pythonmainvariables{dt}.csv'
+
+#     with open(file_path, mode='w', newline='') as file:
+#         writer = csv.writer(file)
+
+#         # Write the header
+#         writer.writerow(['Variable', 'Value'])
+
+#         # Iterate and write each key-value pair
+#         for key, value in scope.items():
+#             if key not in excluded_vars:
+#                 # Handle array-like structures
+#                 if isinstance(value, (list, np.ndarray)):
+#                     # Convert the entire array to a string representation
+#                     value_str = ', '.join(map(str, value))
+#                 else:
+#                     # Convert other types of values to string
+#                     value_str = str(value)
+
+#                 writer.writerow([key, value_str])
+
+# # Usage
+# # Inside your function or scope where you want to debug
+# # save_variables_to_csv(locals())
+                
 import csv
 import numpy as np
 from datetime import datetime
@@ -40,11 +73,14 @@ def save_variables_to_csv(scope, excluded_vars=['params', 'axs'], file_path=None
         writer = csv.writer(file)
 
         # Write the header
-        writer.writerow(['Variable', 'Value'])
+        writer.writerow(['Variable', 'Value', 'Datatype'])
 
         # Iterate and write each key-value pair
         for key, value in scope.items():
             if key not in excluded_vars:
+                # Determine the datatype
+                datatype = type(value).__name__
+
                 # Handle array-like structures
                 if isinstance(value, (list, np.ndarray)):
                     # Convert the entire array to a string representation
@@ -53,11 +89,12 @@ def save_variables_to_csv(scope, excluded_vars=['params', 'axs'], file_path=None
                     # Convert other types of values to string
                     value_str = str(value)
 
-                writer.writerow([key, value_str])
+                writer.writerow([key, value_str, datatype])
 
 # Usage
 # Inside your function or scope where you want to debug
 # save_variables_to_csv(locals())
+
 
 
         
